@@ -252,7 +252,7 @@ CI/CD pipleline.
     ./helm repo add stable https://kubernetes-charts.storage.googleapis.com
     ```
     ```shell
-    ./helm init --client-only --skip-refresh
+    --- ./helm init --client-only --skip-refresh
     ./helm repo rm stable
     ./helm repo add stable https://charts.helm.sh/stable
     ```
