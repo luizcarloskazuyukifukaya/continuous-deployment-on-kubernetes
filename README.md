@@ -247,11 +247,11 @@ CI/CD pipleline.
     ```
 
 1. Add the official stable repository.
-
+    <!---
     ```shell
     ./helm repo add stable https://kubernetes-charts.storage.googleapis.com
     ```
-    <!---
+
     --- ./helm init --client-only --skip-refresh
     --->
     ```shell
