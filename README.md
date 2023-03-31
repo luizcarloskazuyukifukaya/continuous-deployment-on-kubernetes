@@ -251,6 +251,11 @@ CI/CD pipleline.
     ```shell
     ./helm repo add stable https://kubernetes-charts.storage.googleapis.com
     ```
+    ```shell
+    ./helm init --client-only --skip-refresh
+    ./helm repo rm stable
+    ./helm repo add stable https://charts.helm.sh/stable
+    ```
 
 1. Ensure Helm is properly installed by running the following command. You
    should see version `v3.2.1` appear:
