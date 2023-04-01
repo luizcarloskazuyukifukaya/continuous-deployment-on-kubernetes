@@ -63,6 +63,10 @@ and clone the lab code repository to it.
    ```shell
    export GOOGLE_CLOUD_ORG_ID=$(gcloud organizations list --format=json | jq '.[].name' | cut -d\/ -f2 | cut -d\" -f1)
    ```
+   ```shell
+   export GKE_VERSION=1.24
+   ```
+   (note) The GKE version should be updated when you have error creating the Kubernetes Cluster for Jenkins.
 
    Output (do not copy):
 
@@ -186,7 +190,7 @@ and clone the lab code repository to it.
    gcloud container clusters create jenkins-cd \
      --num-nodes 2 \
      --machine-type n1-standard-2 \
-     --cluster-version 1.15 \
+     --cluster-version $GKE_VERSION \
      --service-account "jenkins-sa@$GOOGLE_CLOUD_PROJECT.iam.gserviceaccount.com"
    ```
 
