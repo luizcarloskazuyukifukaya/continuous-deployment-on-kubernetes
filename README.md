@@ -59,6 +59,7 @@ and clone the lab code repository to it.
 
    ```shell
    export GOOGLE_CLOUD_PROJECT=$(gcloud config get-value project)
+   export GOOGLE_CLOUD_ORG_ID=$(gcloud organizations list --format=json | jq '.[].name' | cut -d\/ -f2 | cut -d\" -f1)
    ```
 
    Output (do not copy):
