@@ -83,7 +83,17 @@ and clone the lab code repository to it.
    ```shell
    cd continuous-deployment-on-kubernetes
    ```
-
+## Change GCP organization policy constraints for Cloud Load Balancing
+1. Read the details from the oficial document provided from Google
+    Reference: https://cloud.google.com/load-balancing/docs/org-policy-constraints
+2. Disable Global Load Balancer
+    ```shell
+    gcloud resource-manager org-policies enable-enforce \
+      --organization ORGANIZATION_ID \
+      constraints/compute.disableGlobalLoadBalancing
+   ```
+   (note) You will need to replace the ORGANIZATION_ID with your own Organization ID value.
+   
 ## Create a Service Account with permissions
 
 1. Create a service account, on Google Cloud Platform (GCP).
