@@ -92,15 +92,24 @@ and clone the lab code repository to it.
    ```
 ## Change GCP organization policy constraints for Cloud Load Balancing
 1. Read the details from the oficial document provided from Google
-    Reference: https://cloud.google.com/load-balancing/docs/org-policy-constraints
-2. Disable Global Load Balancer
-    ```shell
-    gcloud resource-manager org-policies enable-enforce \
-      --organization $GOOGLE_CLOUD_ORG_ID \
+    Reference: https://cloud.google.com/load-balancing/docs/org-policy-constraints.
+    It is strongly recommended to enforce this Organization Policy so the Global Load Balancer creation is restricted/controlled. For the sake of the demo, we will disable the constraints/compute.restrictLoadBalancerCreationForTypes, but please follow the guidance on how to manage the creation of the Global Load Balancer appropriatly.
+    
+2. Disable Organization Policy (Disable global load balancing) for the target project 
+  ```shell
+    gcloud resource-manager org-policies disable-enforce \
+      --project $GOOGLE_CLOUD_PROJECT \
       constraints/compute.disableGlobalLoadBalancing
    ```
-   (note) GOOGLE_CLOUD_ORG_ID env value is defined already. You can confirm by using the command "echo $GOOGLE_CLOUD_ORG_ID"
+   (note) This command will disable the Organization Policy enforcement of the target project only.
    
+   Output (do not copy)
+   ```output
+   booleanPolicy: {}
+   constraint: constraints/compute.disableGlobalLoadBalancing
+   etag: CMaonqEGEIjYi2Y=
+   updateTime: '2023-04-01T02:17:42.214101Z'
+   ```
 ## Create a Service Account with permissions
 
 1. Create a service account, on Google Cloud Platform (GCP).
