@@ -93,10 +93,12 @@ and clone the lab code repository to it.
 ## Change GCP organization policy constraints for Cloud Load Balancing
 
 1. Read the details from the oficial document provided from Google
+
     Reference: https://cloud.google.com/load-balancing/docs/org-policy-constraints. <br/>
     It is strongly recommended to enforce this Organization Policy so the Global Load Balancer creation is restricted/controlled. For the sake of the demo, we will disable the constraints/compute.restrictLoadBalancerCreationForTypes, but please follow the guidance on how to manage the creation of the Global Load Balancer appropriatly.
     
 2. Disable Organization Policy (Disable global load balancing) for the target project 
+
   ```shell
     gcloud resource-manager org-policies disable-enforce \
       --project $GOOGLE_CLOUD_PROJECT \
