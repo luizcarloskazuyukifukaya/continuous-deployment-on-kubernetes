@@ -198,7 +198,7 @@ and clone the lab code repository to it.
 
    ```output
    NAME        LOCATION    MASTER_VERSION  MASTER_IP     MACHINE_TYPE  NODE_VERSION   NUM_NODES  STATUS
-   jenkins-cd  us-east1-d  1.15.11-gke.15   35.229.29.69  n1-standard-2 1.15.11-gke.15  2          RUNNING
+   jenkins-cd  us-east1-d  1.24.11-gke.1000   35.148.199.123  n1-standard-2 1.24.11-gke.1000  2   RUNNING
    ```
 
 1. Once that operation completes, retrieve the credentials for your cluster.
