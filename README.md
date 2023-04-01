@@ -104,6 +104,7 @@ and clone the lab code repository to it.
       --project $GOOGLE_CLOUD_PROJECT \
       constraints/compute.disableGlobalLoadBalancing
    ```
+   
    (note) This command will disable the Organization Policy enforcement of the target project only.
    
    Output (do not copy)
