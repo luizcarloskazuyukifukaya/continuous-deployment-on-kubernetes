@@ -211,7 +211,7 @@ and clone the lab code repository to it.
    ```shell
    gcloud container clusters create jenkins-cd \
      --num-nodes 2 \
-     --machine-type n1-standard-2 \
+     --machine-type e2-standard-4 \
      --cluster-version $GKE_VERSION \
      --service-account "jenkins-sa@$GOOGLE_CLOUD_PROJECT.iam.gserviceaccount.com"
    ```
