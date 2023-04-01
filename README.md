@@ -90,7 +90,7 @@ and clone the lab code repository to it.
    ```shell
    cd continuous-deployment-on-kubernetes
    ```
-## Change GCP organization policy constraints for Cloud Load Balancing
+## Change GCP organization policy enforcements
 
 1. Read the details from the oficial document provided from Google
 
@@ -114,6 +114,13 @@ and clone the lab code repository to it.
    constraint: constraints/compute.disableGlobalLoadBalancing
    etag: CMaonqEGEIjYi2Y=
    updateTime: '2023-04-01T02:17:42.214101Z'
+   ```
+   
+3. Allow Protocol Forwarding Based on type of IP Address
+   
+   ```shell
+    gcloud resource-manager org-policies set-policy  \
+    --project=$GOOGLE_CLOUD_PROJECT ./jenkins/orgpolicy.json
    ```
    
 ## Create a Service Account with permissions
