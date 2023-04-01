@@ -104,12 +104,14 @@ and clone the lab code repository to it.
    (note) This command will disable the Organization Policy enforcement of the target project only.
    
    Output (do not copy)
+   
    ```output
    booleanPolicy: {}
    constraint: constraints/compute.disableGlobalLoadBalancing
    etag: CMaonqEGEIjYi2Y=
    updateTime: '2023-04-01T02:17:42.214101Z'
    ```
+   
 ## Create a Service Account with permissions
 
 1. Create a service account, on Google Cloud Platform (GCP).
