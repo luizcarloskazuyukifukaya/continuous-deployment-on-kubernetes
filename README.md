@@ -92,10 +92,10 @@ and clone the lab code repository to it.
 2. Disable Global Load Balancer
     ```shell
     gcloud resource-manager org-policies enable-enforce \
-      --organization ORGANIZATION_ID \
+      --organization $GOOGLE_CLOUD_ORG_ID \
       constraints/compute.disableGlobalLoadBalancing
    ```
-   (note) You will need to replace the ORGANIZATION_ID with your own Organization ID value.
+   (note) GOOGLE_CLOUD_ORG_ID env value is defined already. You can confirm by using the command "echo $GOOGLE_CLOUD_ORG_ID"
    
 ## Create a Service Account with permissions
 
